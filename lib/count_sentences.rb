@@ -28,8 +28,11 @@ class String
 
   def count_sentences
     split_array = self.split(/[.?!]/)
-    split_array.each do |entry|
-      if entry == ""
-        
+    split_array.each do |element|
+      if element == ""
+        split_array.delete(element)
+      end
+    end
+    return split_array.length
   end
 end
